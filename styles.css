@@ -1,0 +1,202 @@
+/* Universal box-sizing for consistent padding and border handling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling for Halloween theme with background image, color, and font */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #222;
+  color: #fdf9f9;
+  padding: 20px;
+}
+
+/* Centered header with padding, border, rounded corners, and shadow */
+header {
+  text-align: center;
+  padding: 30px;
+  border: 3px solid orange;
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+/* Main heading with a spooky shadow effect and Halloween orange color */
+h1 {
+  color: orange;
+  font-size: 3em;
+  text-shadow: 2px 2px 8px black;
+}
+
+/* Secondary heading with dashed underline and spacing */
+h2 {
+  color: orange;
+  border-bottom: 2px dashed orange;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Section styling for spacing, background color, border, and shadow */
+section {
+  margin: 20px 0;
+  padding: 20px;
+  border: 2px solid orange;
+  background-color: rgba(68, 68, 68, 0.85);
+  border-radius: 10px;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+section#halloween-overview ul {
+  list-style-type: none; /* Remove usual bullets */
+  padding-left: 0; /* Remove default padding */
+}
+
+section#halloween-overview ul li {
+  margin: 10px 0; /* Space between list items */
+}
+
+/* Flexbox layout for song items */
+.song-list {
+  display: flex;
+  /* Use flexbox for row layout */
+  align-items: center;
+  justify-content: center;
+  /* Center align items */
+  flex-wrap: wrap;
+  /* Allow wrapping if needed */
+  gap: 15px;
+  /* Spacing between cards */
+  list-style-type: none;
+  /* Remove default list styling */
+  padding: 0;
+  /* Remove padding from list */
+}
+
+/* Card style for each song item */
+.song-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Slightly transparent background */
+  border: 2px solid orange;
+  /* Card border */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 15px;
+  /* Internal padding */
+  text-align: center;
+  /* Centering content */
+  width: 150px;
+  /* Fixed width for cards */
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* Animation effects */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  /* Align song-item content */
+  flex-direction: column;
+  /* Stack image and text vertically */
+  align-items: center;
+  /* Center image and text */
+}
+
+/* Card hover effect */
+.song-item:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  /* Enhance shadow on hover */
+}
+
+.song-item img {
+  width: 100px;
+  /* Adjust image width */
+  height: 100px;
+  /* Adjust image height */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  /* Space below image */
+}
+
+/* Anchor styles with Halloween colors and hover effects */
+a {
+  color: orange;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 10px orange;
+}
+
+/* Footer styling with padding, dark background, border, and rounded corners */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+
+/* Ghost animation for smooth fade-in effect */
+@keyframes ghost {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+
+  header,
+  section,
+  footer {
+    padding: 15px;
+    /* Reduce padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 2.5em;
+    /* Adjust font size */
+  }
+
+  h2 {
+    font-size: 1.8em;
+    /* Adjust font size */
+  }
+  h3 {
+    color: orange; /* Use CSS to set the color for all h3 tags */
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: orange;
+    border-bottom: 2px dashed orange;
+    padding-bottom: 10px;
+  }
+  
+  .song-list
+  
+  .song-item {
+    width: 120px;
+    /* Adjust card width for smaller screens */
+  }
+
+  .song-item img {
+    width: 80px;
+    /* Adjust image size for smaller screens */
+    height: 80px;
+    /* Adjust image size for smaller screens */
+  }
+}
